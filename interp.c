@@ -1208,6 +1208,7 @@ PRIVATE void take_()
 	    if (i > strlen(old))  return; /* the old string unchanged */
 	    p = result = (char *) malloc(strlen(old) - i + 1);
 	    while (i-- > 0)  *p++ = *old++;
+	    *p = 0; /* Fixed: add string null terminator */
 	    UNARY(STRING_NEWNODE,result);
 	    return; }
 	case LIST_:
