@@ -17,7 +17,7 @@
 #define INIAUTOPUT	1
 #define INITRACEGC	0
 				/* installation dependent	*/
-#define SETSIZE		32
+#define SETSIZE		1000000
 #define MAXINT		2147483647
 				/* symbols from getsym		*/
 #define ILLEGAL_	 0
