@@ -1,0 +1,9 @@
+DEFINE
+  endx   == dup 4 >= [pop 0.0] [1.0 19 / +] branch;
+  endy   == pop dup 4 >= [pop 0.0] [0.1 +] branch;
+  sample == 99 [0 >=] [1 -] while pop;
+  nl     == 10 putch;
+  mandel == 0.0 20 [0.0 80 [sample endx] times endy nl] times;
+.
+
+mandel stack.

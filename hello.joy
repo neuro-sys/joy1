@@ -1,0 +1,21 @@
+"seqlib.joy" include .
+
+DEFINE
+  shiftleft == 10 * +;
+  chartoint == ord '0 ord -;
+  tointeger == 0 [chartoint swap shiftleft] fold;
+  onlynum   == [dup '0 >= swap '9 <= and] filter;
+  processline == onlynum tointeger rolldown cons swap;
+  readfile  == "ro" fopen
+               [feof not]
+	       [fgets processline]
+	       while
+	       fclose
+	       [0 !=] filter
+	       reverse;
+  day1 == [] "1.txt" readfile
+.
+
+	      
+day1 .
+

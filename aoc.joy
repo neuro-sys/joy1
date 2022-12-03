@@ -1,0 +1,6 @@
+DEFINE
+  readlines == []
+  	       "1.txt" "ro" fopen
+               [feof not] [fgets rolldown cons swap] while
+	       fclose reverse
+.
